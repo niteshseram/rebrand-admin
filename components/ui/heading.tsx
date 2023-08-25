@@ -12,4 +12,4 @@ const Heading: React.FC<HeadingProps> = ({ title, description }) => {
 	)
 }
 
-export default Heading
+export { Heading }

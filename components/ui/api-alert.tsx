@@ -52,4 +52,4 @@ const ApiAlert: React.FC<ApiAlertProps> = ({
 	)
 }
 
-export default ApiAlert
+export { ApiAlert }

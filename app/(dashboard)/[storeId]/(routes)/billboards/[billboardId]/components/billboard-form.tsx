@@ -10,7 +10,7 @@ import { toast } from 'react-hot-toast'
 import axios from 'axios'
 import { useParams, useRouter } from 'next/navigation'
 
-import Heading from '@/components/ui/heading'
+import { Heading } from '@/components/ui/heading'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import {
@@ -22,8 +22,8 @@ import {
 	FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import ImageUpload from '@/components/ui/image-upload'
-import AlertModal from '@/components/modals/alert-modal'
+import { ImageUpload } from '@/components/ui/image-upload'
+import { AlertModal } from '@/components/modals/alert-modal'
 
 import { useOrigin } from '@/hooks/use-origin'
 
@@ -91,7 +91,7 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
 				`/api/${params.storeId}/billboards/${params.billboardId}`
 			)
 			router.refresh()
-			router.push('/')
+			router.push(`/${params.storeId}/billboards`)
 			toast.success('Billboard has been deleted successfully.')
 		} catch (error: any) {
 			toast.error(
