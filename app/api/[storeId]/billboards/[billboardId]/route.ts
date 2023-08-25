@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 
 export async function GET(
 	req: Request,
-	{ params }: { params: {  billboardId: string } }
+	{ params }: { params: { billboardId: string } }
 ) {
 	try {
 		if (!params.billboardId) {
@@ -23,7 +23,6 @@ export async function GET(
 		return new NextResponse('Internal error', { status: 500 })
 	}
 }
-
 
 export async function PATCH(
 	req: Request,
@@ -68,7 +67,6 @@ export async function PATCH(
 			data: {
 				label,
 				imageUrl,
-				storeId: params.billboardId,
 			},
 		})
 
