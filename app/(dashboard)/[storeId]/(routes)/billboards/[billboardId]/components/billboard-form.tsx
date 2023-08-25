@@ -91,6 +91,7 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
 				`/api/${params.storeId}/billboards/${params.billboardId}`
 			)
 			router.refresh()
+			router.push('/')
 			toast.success('Billboard has been deleted successfully.')
 		} catch (error: any) {
 			toast.error(
@@ -99,6 +100,7 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
 			)
 		} finally {
 			setLoading(false)
+			setOpen(false)
 		}
 	}
 
