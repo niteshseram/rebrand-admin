@@ -35,8 +35,8 @@ const ApiAlert: React.FC<ApiAlertProps> = ({
 
 	return (
 		<Alert>
-			<ServerIcon className='w-4 h-4' />
 			<AlertTitle className='flex items-center gap-x-2'>
+				<ServerIcon className='w-4 h-4' />
 				{title}
 				<Badge variant={variantMap[variant]}>{textMap[variant]}</Badge>
 			</AlertTitle>
